@@ -1,0 +1,16 @@
+{
+  "id": "text_s",
+  "type": "SharedSlice",
+  "name": "TextS",
+  "description": "TextS",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": ""
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "frame",
+  "type": "SharedSlice",
+  "name": "Frame",
+  "description": "Frame",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": ""
+    }
+  ]
+}

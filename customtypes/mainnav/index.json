@@ -1,0 +1,28 @@
+{
+  "format": "custom",
+  "id": "mainnav",
+  "label": "MainNav",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "egveitekkert": {
+        "type": "Group",
+        "config": {
+          "label": "egveitekkert",
+          "repeat": true,
+          "fields": {
+            "what": {
+              "type": "Link",
+              "config": {
+                "label": "what",
+                "placeholder": "",
+                "select": "media"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
