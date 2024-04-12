@@ -6,5 +6,6 @@ export const components = {
   alternate_grid: dynamic(() => import("./AlternateGrid")),
   frame: dynamic(() => import("./Frame")),
   list: dynamic(() => import("./List")),
+  list_slice: dynamic(() => import("./ListSlice")),
   text_s: dynamic(() => import("./TextS")),
 };

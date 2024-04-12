@@ -563,6 +563,51 @@ type ListSliceVariation = ListSliceDefault;
 export type ListSlice = prismic.SharedSlice<"list", ListSliceVariation>;
 
 /**
+ * Primary content in *ListSlice → Items*
+ */
+export interface ListSliceSliceDefaultItem {
+  /**
+   * Link field in *ListSlice → Items*
+   *
+   * - **Field Type**: Content Relationship
+   * - **Placeholder**: *None*
+   * - **API ID Path**: list_slice.items[].link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.ContentRelationshipField;
+}
+
+/**
+ * Default variation for ListSlice Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ListSliceSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Record<string, never>,
+  Simplify<ListSliceSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *ListSlice*
+ */
+type ListSliceSliceVariation = ListSliceSliceDefault;
+
+/**
+ * ListSlice Shared Slice
+ *
+ * - **API ID**: `list_slice`
+ * - **Description**: ListSlice
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ListSliceSlice = prismic.SharedSlice<
+  "list_slice",
+  ListSliceSliceVariation
+>;
+
+/**
  * Default variation for TextS Slice
  *
  * - **API ID**: `default`
@@ -629,6 +674,10 @@ declare module "@prismicio/client" {
       ListSlice,
       ListSliceVariation,
       ListSliceDefault,
+      ListSliceSlice,
+      ListSliceSliceDefaultItem,
+      ListSliceSliceVariation,
+      ListSliceSliceDefault,
       TextSSlice,
       TextSSliceVariation,
       TextSSliceDefault,
