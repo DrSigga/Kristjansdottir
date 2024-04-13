@@ -4,6 +4,12 @@ import dynamic from "next/dynamic";
 
 export const components = {
   alternate_grid: dynamic(() => import("./AlternateGrid")),
+  alternate_grid_2: dynamic(() => import("./AlternateGrid2")),
+  alternate_grid_3: dynamic(() => import("./AlternateGrid3")),
+  alternate_grid_4: dynamic(() => import("./AlternateGrid4")),
+  call_to_action: dynamic(() => import("./CallToAction")),
+  call_to_action_2: dynamic(() => import("./CallToAction2")),
+  call_to_action_3: dynamic(() => import("./CallToAction3")),
   frame: dynamic(() => import("./Frame")),
   list: dynamic(() => import("./List")),
   list_slice: dynamic(() => import("./ListSlice")),
