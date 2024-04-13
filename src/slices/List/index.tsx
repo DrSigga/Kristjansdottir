@@ -13,16 +13,17 @@ export type ListProps = SliceComponentProps<Content.ListSlice>;
  * Component for "List" Slices.
  */
 const List = async ({ slice }: ListProps): Promise<JSX.Element> => {
-
+	const a = slice.variation;
+	const b = a === "sigga" && "/" + a || a === "skipulag" && "/skipulagsradgjof" || a === "rannsokn" && "/rannsoknir" || "/" 
   return (
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
 	  className={styles.card}
     >
-		{/* <Link href={String(slice.primary.h1label.toLocaleString)}> */}
+		<Link href={b}>
 			<PrismicRichText field={slice.primary.h1label} />
-		{/* </Link> */}
+		</Link>
 		{slice.items.length > 0 ? 
 		(<ul>
 			{slice.items.map((item,nr) => <li key={nr}>

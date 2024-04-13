@@ -4,18 +4,13 @@ import { SliceZone } from "@prismicio/react";
 import { createClient } from "@/prismicio";
 import { components } from "@/slices";
 import Link from "next/link";
+import ListPages from "@/components/ListPages";
 
 // import styles from "./home.module.scss"
 
 
 export default async function Page() {
-  const client = createClient();
-  const allPosts = await client.getAllByType("rannsoknir",);
-  console.log(allPosts)
-  return <div>
-	<p>what</p>
-	{allPosts && <ul>{allPosts.map((stak,nr) => <li key={nr}><Link href={stak.href}>{stak.id}</Link></li>)}</ul>}
-  </div>;
+  return <ListPages type="sigga"/>
 }
 
 export async function generateMetadata(): Promise<Metadata> {

@@ -1,0 +1,29 @@
+// .container {
+// 	background-color: transparent;
+// 	display: grid;
+// 	gap: 2em;
+// 	grid-template-columns: repeat(3, 1fr);
+// }
+
+.card {
+	background-color: white;
+	// border: 1px solid white;
+	// width: fit-content;
+	align-self: center;
+	padding: 1em;
+	// border-radius: 1em;
+	color: black;
+	ul {
+		list-style: inside;
+
+		  
+	}
+	min-height: 50svh;
+}
+
+
+@media (max-width: 600px) {
+	.card {
+		grid-column: span 3;
+	}
+}
