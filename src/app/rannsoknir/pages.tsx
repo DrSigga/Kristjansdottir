@@ -13,6 +13,7 @@ export default async function Page() {
   const allPosts = await client.getAllByType("rannsoknir",);
   console.log(allPosts)
   return <div>
+	<p>what</p>
 	{allPosts && <ul>{allPosts.map((stak,nr) => <li key={nr}><Link href={stak.href}>{stak.id}</Link></li>)}</ul>}
   </div>;
 }

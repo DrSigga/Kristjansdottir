@@ -24,6 +24,7 @@ export default function RootLayout({
 		<Link href="/">
 			<h1>Sigríður Kristjánsdóttir</h1>
 		</Link>
+		<p>Síða í vinnslu</p>
 		</header>
 				<main>{children}</main>
 		<footer>Síða í vinnslu</footer>

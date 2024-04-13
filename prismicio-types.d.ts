@@ -266,11 +266,11 @@ type SiggaDocumentDataSlicesSlice =
   | TextSSlice;
 
 /**
- * Content for Sigga documents
+ * Content for sigga documents
  */
 interface SiggaDocumentData {
   /**
-   * teksti field in *Sigga*
+   * teksti field in *sigga*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
@@ -281,7 +281,7 @@ interface SiggaDocumentData {
   teksti: prismic.RichTextField;
 
   /**
-   * Slice Zone field in *Sigga*
+   * Slice Zone field in *sigga*
    *
    * - **Field Type**: Slice Zone
    * - **Placeholder**: *None*
@@ -290,7 +290,7 @@ interface SiggaDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#slices
    */
   slices: prismic.SliceZone<SiggaDocumentDataSlicesSlice> /**
-   * Meta Description field in *Sigga*
+   * Meta Description field in *sigga*
    *
    * - **Field Type**: Text
    * - **Placeholder**: A brief summary of the page
@@ -301,7 +301,7 @@ interface SiggaDocumentData {
   meta_description: prismic.KeyTextField;
 
   /**
-   * Meta Image field in *Sigga*
+   * Meta Image field in *sigga*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
@@ -312,7 +312,7 @@ interface SiggaDocumentData {
   meta_image: prismic.ImageField<never>;
 
   /**
-   * Meta Title field in *Sigga*
+   * Meta Title field in *sigga*
    *
    * - **Field Type**: Text
    * - **Placeholder**: A title of the page used for social media and search engines
@@ -324,7 +324,7 @@ interface SiggaDocumentData {
 }
 
 /**
- * Sigga document from Prismic
+ * sigga document from Prismic
  *
  * - **API ID**: `sigga`
  * - **Repeatable**: `true`
@@ -2000,7 +2000,7 @@ export interface ListSliceRannsoknItem {
 }
 
 /**
- * Rannsónir variation for List Slice
+ * Rannsoknir variation for List Slice
  *
  * - **API ID**: `rannsokn`
  * - **Description**: Default
@@ -2126,7 +2126,7 @@ export interface ListSliceSkipulagItem {
 }
 
 /**
- * skipulag variation for List Slice
+ * skipulagsradgjof variation for List Slice
  *
  * - **API ID**: `skipulag`
  * - **Description**: Default
