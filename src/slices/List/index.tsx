@@ -17,11 +17,11 @@ const List = async ({ slice }: ListProps): Promise<JSX.Element> => {
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
-		
+		<h1>{slice.variation}</h1>
 		{slice.items.length > 0 ? 
 		(<ul>
 			{slice.items.map((item,nr) => <li key={nr}>
-				<PrismicNextLink field={item.siggahl}>{nr}</PrismicNextLink>
+				<PrismicNextLink field={item.siggahl}>{nr+1}</PrismicNextLink>
 			</li>)}
 		</ul> 
 ) : ''}
