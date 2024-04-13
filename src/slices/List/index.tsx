@@ -20,9 +20,9 @@ const List = async ({ slice }: ListProps): Promise<JSX.Element> => {
       data-slice-variation={slice.variation}
 	  className={styles.card}
     >
-		<Link href={'/' + slice.variation}>
+		{/* <Link href={String(slice.primary.h1label.toLocaleString)}> */}
 			<PrismicRichText field={slice.primary.h1label} />
-		</Link>
+		{/* </Link> */}
 		{slice.items.length > 0 ? 
 		(<ul>
 			{slice.items.map((item,nr) => <li key={nr}>

@@ -65,6 +65,71 @@ interface HomeDocumentData {
 export type HomeDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithoutUID<Simplify<HomeDocumentData>, "home", Lang>;
 
+type ListRannsoknirDocumentDataSlicesSlice = ListSlice;
+
+/**
+ * Content for list_rannsoknir documents
+ */
+interface ListRannsoknirDocumentData {
+  /**
+   * Slice Zone field in *list_rannsoknir*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: list_rannsoknir.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */
+  slices: prismic.SliceZone<ListRannsoknirDocumentDataSlicesSlice> /**
+   * Meta Description field in *list_rannsoknir*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: list_rannsoknir.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */;
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * Meta Image field in *list_rannsoknir*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: list_rannsoknir.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  meta_image: prismic.ImageField<never>;
+
+  /**
+   * Meta Title field in *list_rannsoknir*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: list_rannsoknir.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_title: prismic.KeyTextField;
+}
+
+/**
+ * list_rannsoknir document from Prismic
+ *
+ * - **API ID**: `list_rannsoknir`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type ListRannsoknirDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<
+    Simplify<ListRannsoknirDocumentData>,
+    "list_rannsoknir",
+    Lang
+  >;
+
 /**
  * Item in *MainNav → egveitekkert*
  */
@@ -352,6 +417,7 @@ export type SkipulagsradgjofDocument<Lang extends string = string> =
 
 export type AllDocumentTypes =
   | HomeDocument
+  | ListRannsoknirDocument
   | MainnavDocument
   | RannsoknirDocument
   | SiggaDocument
@@ -2247,6 +2313,9 @@ declare module "@prismicio/client" {
       HomeDocument,
       HomeDocumentData,
       HomeDocumentDataSlicesSlice,
+      ListRannsoknirDocument,
+      ListRannsoknirDocumentData,
+      ListRannsoknirDocumentDataSlicesSlice,
       MainnavDocument,
       MainnavDocumentData,
       MainnavDocumentDataEgveitekkertItem,
