@@ -1701,6 +1701,16 @@ export interface ListSliceDefaultItem {
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   titill: prismic.RichTextField;
+
+  /**
+   * dagsetning field in *List → Items*
+   *
+   * - **Field Type**: Timestamp
+   * - **Placeholder**: *None*
+   * - **API ID Path**: list.items[].dagsetning
+   * - **Documentation**: https://prismic.io/docs/field#timestamp
+   */
+  dagsetning: prismic.TimestampField;
 }
 
 /**

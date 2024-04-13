@@ -1,6 +1,6 @@
 import { Content, createClient } from "@prismicio/client";
 import { PrismicNextLink } from "@prismicio/next";
-import { SliceComponentProps } from "@prismicio/react";
+import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 
 /**
  * Props for `List`.
@@ -21,7 +21,9 @@ const List = async ({ slice }: ListProps): Promise<JSX.Element> => {
 		{slice.items.length > 0 ? 
 		(<ul>
 			{slice.items.map((item,nr) => <li key={nr}>
-				<PrismicNextLink field={item.siggahl}>{nr+1}</PrismicNextLink>
+				<PrismicNextLink field={item.siggahl}>
+					<PrismicRichText field={item.titill} />
+</PrismicNextLink>
 			</li>)}
 		</ul> 
 ) : ''}
