@@ -17,3 +17,8 @@
 	/* margin: auto 0; */
 	text-align: center;
   }
+
+  img {
+	max-width: 95vw;
+	object-fit: scale-down;
+  }
