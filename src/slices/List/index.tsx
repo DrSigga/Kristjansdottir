@@ -1,6 +1,7 @@
 import { Content, createClient } from "@prismicio/client";
 import { PrismicNextLink } from "@prismicio/next";
 import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
+import styles from "./list.module.scss"
 
 /**
  * Props for `List`.
@@ -16,14 +17,15 @@ const List = async ({ slice }: ListProps): Promise<JSX.Element> => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
+	  className={styles.card}
     >
-		<h1>{slice.variation}</h1>
+		<PrismicRichText field={slice.primary.h1label} />
 		{slice.items.length > 0 ? 
 		(<ul>
 			{slice.items.map((item,nr) => <li key={nr}>
 				<PrismicNextLink field={item.siggahl}>
 					<PrismicRichText field={item.titill} />
-					<>{item.dagsetning || ''}</>
+					<></>
 </PrismicNextLink>
 			</li>)}
 		</ul> 

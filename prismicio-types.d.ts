@@ -4,101 +4,12 @@ import type * as prismic from "@prismicio/client";
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
-/**
- * Item in *Home → SiggaNav*
- */
-export interface HomeDocumentDataSigganavItem {
-  /**
-   * sigga_hlekkir field in *Home → SiggaNav*
-   *
-   * - **Field Type**: Content Relationship
-   * - **Placeholder**: *None*
-   * - **API ID Path**: home.sigganav[].sigga_hlekkir
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  sigga_hlekkir: prismic.ContentRelationshipField<"sigga">;
-}
-
-/**
- * Item in *Home → Skipulags_nav*
- */
-export interface HomeDocumentDataSkipulagsNavItem {
-  /**
-   * skipulag_hlekkir field in *Home → Skipulags_nav*
-   *
-   * - **Field Type**: Content Relationship
-   * - **Placeholder**: *None*
-   * - **API ID Path**: home.skipulags_nav[].skipulag_hlekkir
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  skipulag_hlekkir: prismic.ContentRelationshipField<"skipulagsradgjof">;
-}
-
-/**
- * Item in *Home → Rannsoknir*
- */
-export interface HomeDocumentDataRannsoknirItem {
-  /**
-   * rannsoknir_hlekkir field in *Home → Rannsoknir*
-   *
-   * - **Field Type**: Content Relationship
-   * - **Placeholder**: *None*
-   * - **API ID Path**: home.rannsoknir[].rannsoknir_hlekkir
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  rannsoknir_hlekkir: prismic.ContentRelationshipField<"rannsoknir">;
-}
-
-type HomeDocumentDataSlicesSlice = ListSlice;
+type HomeDocumentDataSlicesSlice = HeroSlice | ListSlice;
 
 /**
  * Content for Home documents
  */
 interface HomeDocumentData {
-  /**
-   * SiggaNav field in *Home*
-   *
-   * - **Field Type**: Group
-   * - **Placeholder**: *None*
-   * - **API ID Path**: home.sigganav[]
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#group
-   */
-  sigganav: prismic.GroupField<Simplify<HomeDocumentDataSigganavItem>>;
-
-  /**
-   * Skipulags_nav field in *Home*
-   *
-   * - **Field Type**: Group
-   * - **Placeholder**: *None*
-   * - **API ID Path**: home.skipulags_nav[]
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#group
-   */
-  skipulags_nav: prismic.GroupField<Simplify<HomeDocumentDataSkipulagsNavItem>>;
-
-  /**
-   * Rannsoknir field in *Home*
-   *
-   * - **Field Type**: Group
-   * - **Placeholder**: *None*
-   * - **API ID Path**: home.rannsoknir[]
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#group
-   */
-  rannsoknir: prismic.GroupField<Simplify<HomeDocumentDataRannsoknirItem>>;
-
-  /**
-   * Teksti field in *Home*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: Sigríður Kristjánsdóttir
-   * - **API ID Path**: home.teksti
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  teksti: prismic.RichTextField;
-
   /**
    * Slice Zone field in *Home*
    *
@@ -1679,6 +1590,252 @@ type FrameSliceVariation = FrameSliceDefault;
 export type FrameSlice = prismic.SharedSlice<"frame", FrameSliceVariation>;
 
 /**
+ * Primary content in *Hero → Primary*
+ */
+export interface HeroSliceDefaultPrimary {
+  /**
+   * eyebrowHeadline field in *Hero → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Eyebrow
+   * - **API ID Path**: hero.primary.eyebrowHeadline
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  eyebrowHeadline: prismic.KeyTextField;
+
+  /**
+   * title field in *Hero → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title: prismic.RichTextField;
+
+  /**
+   * description field in *Hero → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.description
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  description: prismic.RichTextField;
+
+  /**
+   * image field in *Hero → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * callToActionLabel field in *Hero → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.callToActionLabel
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  callToActionLabel: prismic.KeyTextField;
+
+  /**
+   * callToActionLink field in *Hero → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.callToActionLink
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  callToActionLink: prismic.LinkField;
+}
+
+/**
+ * Default variation for Hero Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type HeroSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<HeroSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Primary content in *Hero → Primary*
+ */
+export interface HeroSliceImageRightPrimary {
+  /**
+   * eyebrowHeadline field in *Hero → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Eyebrow
+   * - **API ID Path**: hero.primary.eyebrowHeadline
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  eyebrowHeadline: prismic.KeyTextField;
+
+  /**
+   * title field in *Hero → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title: prismic.RichTextField;
+
+  /**
+   * description field in *Hero → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.description
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  description: prismic.RichTextField;
+
+  /**
+   * image field in *Hero → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * callToActionLabel field in *Hero → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.callToActionLabel
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  callToActionLabel: prismic.KeyTextField;
+
+  /**
+   * callToActionLink field in *Hero → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.callToActionLink
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  callToActionLink: prismic.LinkField;
+}
+
+/**
+ * Image Right variation for Hero Slice
+ *
+ * - **API ID**: `imageRight`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type HeroSliceImageRight = prismic.SharedSliceVariation<
+  "imageRight",
+  Simplify<HeroSliceImageRightPrimary>,
+  never
+>;
+
+/**
+ * Primary content in *Hero → Primary*
+ */
+export interface HeroSliceHeimaPrimary {
+  /**
+   * eyebrowHeadline field in *Hero → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Eyebrow
+   * - **API ID Path**: hero.primary.eyebrowHeadline
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  eyebrowHeadline: prismic.KeyTextField;
+
+  /**
+   * title field in *Hero → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title: prismic.RichTextField;
+
+  /**
+   * description field in *Hero → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.description
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  description: prismic.RichTextField;
+
+  /**
+   * image field in *Hero → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+}
+
+/**
+ * heima variation for Hero Slice
+ *
+ * - **API ID**: `heima`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type HeroSliceHeima = prismic.SharedSliceVariation<
+  "heima",
+  Simplify<HeroSliceHeimaPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Hero*
+ */
+type HeroSliceVariation =
+  | HeroSliceDefault
+  | HeroSliceImageRight
+  | HeroSliceHeima;
+
+/**
+ * Hero Shared Slice
+ *
+ * - **API ID**: `hero`
+ * - **Description**: Hero
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type HeroSlice = prismic.SharedSlice<"hero", HeroSliceVariation>;
+
+/**
+ * Primary content in *List → Primary*
+ */
+export interface ListSliceDefaultPrimary {
+  /**
+   * h1label field in *List → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: list.primary.h1label
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  h1label: prismic.RichTextField;
+}
+
+/**
  * Primary content in *List → Items*
  */
 export interface ListSliceDefaultItem {
@@ -1722,9 +1879,24 @@ export interface ListSliceDefaultItem {
  */
 export type ListSliceDefault = prismic.SharedSliceVariation<
   "default",
-  Record<string, never>,
+  Simplify<ListSliceDefaultPrimary>,
   Simplify<ListSliceDefaultItem>
 >;
+
+/**
+ * Primary content in *List → Primary*
+ */
+export interface ListSliceRannsoknPrimary {
+  /**
+   * h1label field in *List → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: list.primary.h1label
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  h1label: prismic.RichTextField;
+}
 
 /**
  * Primary content in *List → Items*
@@ -1762,7 +1934,7 @@ export interface ListSliceRannsoknItem {
 }
 
 /**
- * rannsokn variation for List Slice
+ * Rannsónir variation for List Slice
  *
  * - **API ID**: `rannsokn`
  * - **Description**: Default
@@ -1770,9 +1942,24 @@ export interface ListSliceRannsoknItem {
  */
 export type ListSliceRannsokn = prismic.SharedSliceVariation<
   "rannsokn",
-  Record<string, never>,
+  Simplify<ListSliceRannsoknPrimary>,
   Simplify<ListSliceRannsoknItem>
 >;
+
+/**
+ * Primary content in *List → Primary*
+ */
+export interface ListSliceSiggaPrimary {
+  /**
+   * h1label field in *List → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: list.primary.h1label
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  h1label: prismic.RichTextField;
+}
 
 /**
  * Primary content in *List → Items*
@@ -1818,9 +2005,24 @@ export interface ListSliceSiggaItem {
  */
 export type ListSliceSigga = prismic.SharedSliceVariation<
   "sigga",
-  Record<string, never>,
+  Simplify<ListSliceSiggaPrimary>,
   Simplify<ListSliceSiggaItem>
 >;
+
+/**
+ * Primary content in *List → Primary*
+ */
+export interface ListSliceSkipulagPrimary {
+  /**
+   * h1label field in *List → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: list.primary.h1label
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  h1label: prismic.RichTextField;
+}
 
 /**
  * Primary content in *List → Items*
@@ -1866,7 +2068,7 @@ export interface ListSliceSkipulagItem {
  */
 export type ListSliceSkipulag = prismic.SharedSliceVariation<
   "skipulag",
-  Record<string, never>,
+  Simplify<ListSliceSkipulagPrimary>,
   Simplify<ListSliceSkipulagItem>
 >;
 
@@ -2044,9 +2246,6 @@ declare module "@prismicio/client" {
     export type {
       HomeDocument,
       HomeDocumentData,
-      HomeDocumentDataSigganavItem,
-      HomeDocumentDataSkipulagsNavItem,
-      HomeDocumentDataRannsoknirItem,
       HomeDocumentDataSlicesSlice,
       MainnavDocument,
       MainnavDocumentData,
@@ -2114,10 +2313,22 @@ declare module "@prismicio/client" {
       FrameSlice,
       FrameSliceVariation,
       FrameSliceDefault,
+      HeroSlice,
+      HeroSliceDefaultPrimary,
+      HeroSliceImageRightPrimary,
+      HeroSliceHeimaPrimary,
+      HeroSliceVariation,
+      HeroSliceDefault,
+      HeroSliceImageRight,
+      HeroSliceHeima,
       ListSlice,
+      ListSliceDefaultPrimary,
       ListSliceDefaultItem,
+      ListSliceRannsoknPrimary,
       ListSliceRannsoknItem,
+      ListSliceSiggaPrimary,
       ListSliceSiggaItem,
+      ListSliceSkipulagPrimary,
       ListSliceSkipulagItem,
       ListSliceVariation,
       ListSliceDefault,

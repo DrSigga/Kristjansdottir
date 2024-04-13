@@ -6,71 +6,14 @@
   "status": true,
   "json": {
     "Main": {
-      "sigganav": {
-        "type": "Group",
-        "config": {
-          "label": "SiggaNav",
-          "repeat": true,
-          "fields": {
-            "sigga_hlekkir": {
-              "type": "Link",
-              "config": {
-                "label": "sigga_hlekkir",
-                "select": "document",
-                "customtypes": ["sigga"]
-              }
-            }
-          }
-        }
-      },
-      "skipulags_nav": {
-        "type": "Group",
-        "config": {
-          "label": "Skipulags_nav",
-          "repeat": true,
-          "fields": {
-            "skipulag_hlekkir": {
-              "type": "Link",
-              "config": {
-                "label": "skipulag_hlekkir",
-                "select": "document",
-                "customtypes": ["skipulagsradgjof"]
-              }
-            }
-          }
-        }
-      },
-      "rannsoknir": {
-        "type": "Group",
-        "config": {
-          "label": "Rannsoknir",
-          "repeat": true,
-          "fields": {
-            "rannsoknir_hlekkir": {
-              "type": "Link",
-              "config": {
-                "label": "rannsoknir_hlekkir",
-                "select": "document",
-                "customtypes": ["rannsoknir"]
-              }
-            }
-          }
-        }
-      },
-      "teksti": {
-        "type": "StructuredText",
-        "config": {
-          "label": "Teksti",
-          "placeholder": "Sigríður Kristjánsdóttir",
-          "allowTargetBlank": true,
-          "multi": "paragraph,preformatted,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl,heading1"
-        }
-      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "hero": {
+              "type": "SharedSlice"
+            },
             "list": {
               "type": "SharedSlice"
             }

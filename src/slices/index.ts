@@ -11,6 +11,7 @@ export const components = {
   call_to_action_2: dynamic(() => import("./CallToAction2")),
   call_to_action_3: dynamic(() => import("./CallToAction3")),
   frame: dynamic(() => import("./Frame")),
+  hero: dynamic(() => import("./Hero")),
   list: dynamic(() => import("./List")),
   list_slice: dynamic(() => import("./ListSlice")),
   tekki: dynamic(() => import("./Tekki")),

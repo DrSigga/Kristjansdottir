@@ -1,0 +1,16 @@
+.container {
+	background-color: transparent;
+	display: grid;
+	// display: flex;
+	gap: 2em;
+	grid-template-columns: repeat(3, 1fr);
+	margin: 0 auto;
+	width: 90vw;
+	margin: 15svh auto;
+	align-self: center;
+	justify-self: center;
+
+	:first-child {
+		grid-column: span 3;
+	}
+}
