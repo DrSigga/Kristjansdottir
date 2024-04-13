@@ -16,6 +16,20 @@
 								"id": "mock_document_id"
 							}
 						}
+					],
+					[
+						"titill",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Excepteur proident ut anim cupidatat mollit pariatur mollit veniam occaecat excepteur."
+									}
+								}
+							]
+						}
 					]
 				]
 			}

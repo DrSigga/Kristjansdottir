@@ -1691,6 +1691,16 @@ export interface ListSliceDefaultItem {
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   siggahl: prismic.ContentRelationshipField<"sigga">;
+
+  /**
+   * titill field in *List → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: listi
+   * - **API ID Path**: list.items[].titill
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  titill: prismic.RichTextField;
 }
 
 /**

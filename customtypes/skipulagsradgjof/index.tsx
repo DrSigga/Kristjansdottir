@@ -18,14 +18,7 @@ const List = async ({ slice }: ListProps): Promise<JSX.Element> => {
       data-slice-variation={slice.variation}
     >
 		
-		{slice.items.length > 0 ? 
-		(<ul>
-			{slice.items.map((item,nr) => <li key={nr}>
-				<PrismicNextLink field={item.siggahl}>{nr}</PrismicNextLink>
-			</li>)}
-		</ul> 
-) : ''}
-</section>
+<PrismicNextLink field={item.siggahl}>Link</PrismicNextLink>    </section>
   );
 };
 
