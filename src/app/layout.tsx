@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 // import { Inter } from "next/font/google";
 import styles from "./layout.module.scss";
 import "./globals.css"
+import Link from "next/link";
 
 // const inter = Inter({ subsets: ["latin"] });
 
@@ -20,7 +21,9 @@ export default function RootLayout({
 
       <body className={styles.bb}>
 	  <header>
-		<h1>Sigríður Kristjánsdóttir</h1>
+		<Link href="/">
+			<h1>Sigríður Kristjánsdóttir</h1>
+		</Link>
 		</header>
 				<main>{children}</main>
 		<footer>Síða í vinnslu</footer>
