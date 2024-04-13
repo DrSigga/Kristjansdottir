@@ -22,7 +22,7 @@ const List = async ({ slice }: ListProps): Promise<JSX.Element> => {
 		(<ul>
 			{slice.items.map((item,nr) => <li key={nr}>
 				<PrismicNextLink field={item.siggahl}>
-					<PrismicRichText field={item.titill} />
+					<PrismicRichText field={item.} />
 </PrismicNextLink>
 			</li>)}
 		</ul> 
