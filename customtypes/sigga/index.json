@@ -26,6 +26,9 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "tekki": {
+              "type": "SharedSlice"
+            },
             "text_s": {
               "type": "SharedSlice"
             }

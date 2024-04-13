@@ -7,5 +7,6 @@ export const components = {
   frame: dynamic(() => import("./Frame")),
   list: dynamic(() => import("./List")),
   list_slice: dynamic(() => import("./ListSlice")),
+  tekki: dynamic(() => import("./Tekki")),
   text_s: dynamic(() => import("./TextS")),
 };

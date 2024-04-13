@@ -10,7 +10,42 @@
       "docURL": "...",
       "version": "initial",
       "description": "Default",
-      "imageUrl": ""
+      "imageUrl": "",
+      "primary": {},
+      "items": {
+        "teksti": {
+          "type": "StructuredText",
+          "config": {
+            "label": "teksti",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "mynd": {
+          "type": "Image",
+          "config": {
+            "label": "mynd",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "embed": {
+          "type": "Embed",
+          "config": {
+            "label": "embed",
+            "placeholder": ""
+          }
+        },
+        "meida": {
+          "type": "Link",
+          "config": {
+            "label": "meida",
+            "placeholder": "",
+            "select": "media"
+          }
+        }
+      }
     }
   ]
 }

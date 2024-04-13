@@ -203,7 +203,7 @@ export type MainnavDocument<Lang extends string = string> =
     Lang
   >;
 
-type RannsoknirDocumentDataSlicesSlice = FrameSlice;
+type RannsoknirDocumentDataSlicesSlice = TextSSlice | FrameSlice;
 
 /**
  * Content for Rannsóknir documents
@@ -279,7 +279,7 @@ export type RannsoknirDocument<Lang extends string = string> =
     Lang
   >;
 
-type SiggaDocumentDataSlicesSlice = TextSSlice;
+type SiggaDocumentDataSlicesSlice = TekkiSlice | TextSSlice;
 
 /**
  * Content for Sigga documents
@@ -351,7 +351,7 @@ interface SiggaDocumentData {
 export type SiggaDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<SiggaDocumentData>, "sigga", Lang>;
 
-type SkipulagsradgjofDocumentDataSlicesSlice = AlternateGridSlice;
+type SkipulagsradgjofDocumentDataSlicesSlice = TextSSlice | AlternateGridSlice;
 
 /**
  * Content for Skipulagráðgjöf documents
@@ -822,6 +822,78 @@ export type ListSliceSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Default variation for Tekki Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TekkiSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Record<string, never>,
+  never
+>;
+
+/**
+ * Slice variation for *Tekki*
+ */
+type TekkiSliceVariation = TekkiSliceDefault;
+
+/**
+ * Tekki Shared Slice
+ *
+ * - **API ID**: `tekki`
+ * - **Description**: Tekki
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TekkiSlice = prismic.SharedSlice<"tekki", TekkiSliceVariation>;
+
+/**
+ * Primary content in *TextS → Items*
+ */
+export interface TextSSliceDefaultItem {
+  /**
+   * teksti field in *TextS → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_s.items[].teksti
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  teksti: prismic.RichTextField;
+
+  /**
+   * mynd field in *TextS → Items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_s.items[].mynd
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  mynd: prismic.ImageField<never>;
+
+  /**
+   * embed field in *TextS → Items*
+   *
+   * - **Field Type**: Embed
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_s.items[].embed
+   * - **Documentation**: https://prismic.io/docs/field#embed
+   */
+  embed: prismic.EmbedField;
+
+  /**
+   * meida field in *TextS → Items*
+   *
+   * - **Field Type**: Link to Media
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_s.items[].meida
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  meida: prismic.LinkToMediaField;
+}
+
+/**
  * Default variation for TextS Slice
  *
  * - **API ID**: `default`
@@ -831,7 +903,7 @@ export type ListSliceSlice = prismic.SharedSlice<
 export type TextSSliceDefault = prismic.SharedSliceVariation<
   "default",
   Record<string, never>,
-  never
+  Simplify<TextSSliceDefaultItem>
 >;
 
 /**
@@ -902,7 +974,11 @@ declare module "@prismicio/client" {
       ListSliceSliceDefaultItem,
       ListSliceSliceVariation,
       ListSliceSliceDefault,
+      TekkiSlice,
+      TekkiSliceVariation,
+      TekkiSliceDefault,
       TextSSlice,
+      TextSSliceDefaultItem,
       TextSSliceVariation,
       TextSSliceDefault,
     };
