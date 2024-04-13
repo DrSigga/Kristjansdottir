@@ -18,7 +18,7 @@ const List = async ({ slice }: ListProps): Promise<JSX.Element> => {
       data-slice-variation={slice.variation}
     >
 		
-<PrismicNextLink field={item.siggahl}>Link</PrismicNextLink>    </section>
+ </section>
   );
 };
 
