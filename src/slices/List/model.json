@@ -10,7 +10,83 @@
       "docURL": "...",
       "version": "initial",
       "description": "Default",
-      "imageUrl": ""
+      "imageUrl": "",
+      "primary": {},
+      "items": {
+        "siggahl": {
+          "type": "Link",
+          "config": {
+            "label": "siggahl",
+            "select": "document",
+            "customtypes": [
+              "sigga"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "rannsokn",
+      "name": "rannsokn",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {},
+      "items": {
+        "siggahl": {
+          "type": "Link",
+          "config": {
+            "label": "siggahl",
+            "select": "document",
+            "customtypes": [
+              "rannsoknir"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "sigga",
+      "name": "sigga",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {},
+      "items": {
+        "siggahl": {
+          "type": "Link",
+          "config": {
+            "label": "siggahl",
+            "select": "document",
+            "customtypes": [
+              "sigga"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "skipulag",
+      "name": "skipulag",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {},
+      "items": {
+        "siggahl": {
+          "type": "Link",
+          "config": {
+            "label": "siggahl",
+            "select": "document",
+            "customtypes": [
+              "skipulagsradgjof"
+            ]
+          }
+        }
+      }
     }
   ]
 }

@@ -647,6 +647,21 @@ type FrameSliceVariation = FrameSliceDefault;
 export type FrameSlice = prismic.SharedSlice<"frame", FrameSliceVariation>;
 
 /**
+ * Primary content in *List → Items*
+ */
+export interface ListSliceDefaultItem {
+  /**
+   * siggahl field in *List → Items*
+   *
+   * - **Field Type**: Content Relationship
+   * - **Placeholder**: *None*
+   * - **API ID Path**: list.items[].siggahl
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  siggahl: prismic.ContentRelationshipField<"sigga">;
+}
+
+/**
  * Default variation for List Slice
  *
  * - **API ID**: `default`
@@ -656,13 +671,101 @@ export type FrameSlice = prismic.SharedSlice<"frame", FrameSliceVariation>;
 export type ListSliceDefault = prismic.SharedSliceVariation<
   "default",
   Record<string, never>,
-  never
+  Simplify<ListSliceDefaultItem>
+>;
+
+/**
+ * Primary content in *List → Items*
+ */
+export interface ListSliceRannsoknItem {
+  /**
+   * siggahl field in *List → Items*
+   *
+   * - **Field Type**: Content Relationship
+   * - **Placeholder**: *None*
+   * - **API ID Path**: list.items[].siggahl
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  siggahl: prismic.ContentRelationshipField<"rannsoknir">;
+}
+
+/**
+ * rannsokn variation for List Slice
+ *
+ * - **API ID**: `rannsokn`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ListSliceRannsokn = prismic.SharedSliceVariation<
+  "rannsokn",
+  Record<string, never>,
+  Simplify<ListSliceRannsoknItem>
+>;
+
+/**
+ * Primary content in *List → Items*
+ */
+export interface ListSliceSiggaItem {
+  /**
+   * siggahl field in *List → Items*
+   *
+   * - **Field Type**: Content Relationship
+   * - **Placeholder**: *None*
+   * - **API ID Path**: list.items[].siggahl
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  siggahl: prismic.ContentRelationshipField<"sigga">;
+}
+
+/**
+ * sigga variation for List Slice
+ *
+ * - **API ID**: `sigga`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ListSliceSigga = prismic.SharedSliceVariation<
+  "sigga",
+  Record<string, never>,
+  Simplify<ListSliceSiggaItem>
+>;
+
+/**
+ * Primary content in *List → Items*
+ */
+export interface ListSliceSkipulagItem {
+  /**
+   * siggahl field in *List → Items*
+   *
+   * - **Field Type**: Content Relationship
+   * - **Placeholder**: *None*
+   * - **API ID Path**: list.items[].siggahl
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  siggahl: prismic.ContentRelationshipField<"skipulagsradgjof">;
+}
+
+/**
+ * skipulag variation for List Slice
+ *
+ * - **API ID**: `skipulag`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ListSliceSkipulag = prismic.SharedSliceVariation<
+  "skipulag",
+  Record<string, never>,
+  Simplify<ListSliceSkipulagItem>
 >;
 
 /**
  * Slice variation for *List*
  */
-type ListSliceVariation = ListSliceDefault;
+type ListSliceVariation =
+  | ListSliceDefault
+  | ListSliceRannsokn
+  | ListSliceSigga
+  | ListSliceSkipulag;
 
 /**
  * List Shared Slice
@@ -786,8 +889,15 @@ declare module "@prismicio/client" {
       FrameSliceVariation,
       FrameSliceDefault,
       ListSlice,
+      ListSliceDefaultItem,
+      ListSliceRannsoknItem,
+      ListSliceSiggaItem,
+      ListSliceSkipulagItem,
       ListSliceVariation,
       ListSliceDefault,
+      ListSliceRannsokn,
+      ListSliceSigga,
+      ListSliceSkipulag,
       ListSliceSlice,
       ListSliceSliceDefaultItem,
       ListSliceSliceVariation,
