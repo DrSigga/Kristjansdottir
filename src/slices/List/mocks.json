@@ -60,6 +60,28 @@
 								"id": "mock_document_id"
 							}
 						}
+					],
+					[
+						"titill",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "In sit veniam ea dolor amet incididunt eiusmod consequat sint consectetur consectetur excepteur."
+									}
+								}
+							]
+						}
+					],
+					[
+						"dagsetning",
+						{
+							"__TYPE__": "FieldContent",
+							"type": "Timestamp",
+							"value": "2020-05-11T04:20:39Z"
+						}
 					]
 				]
 			}
@@ -82,6 +104,28 @@
 								"id": "mock_document_id"
 							}
 						}
+					],
+					[
+						"titill",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Laboris adipisicing est consectetur magna consequat id duis culpa labore consequat elit fugiat."
+									}
+								}
+							]
+						}
+					],
+					[
+						"dagsetning",
+						{
+							"__TYPE__": "FieldContent",
+							"type": "Timestamp",
+							"value": "2020-11-01T04:43:03Z"
+						}
 					]
 				]
 			}
@@ -103,6 +147,28 @@
 								"__TYPE__": "DocumentLink",
 								"id": "mock_document_id"
 							}
+						}
+					],
+					[
+						"titill",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Amet esse cillum voluptate ex ullamco et aliquip cillum reprehenderit mollit. Nostrud ipsum ullamco ullamco exercitation fugiat labore cillum amet. Cillum et occaecat reprehenderit dolore ipsum id culpa."
+									}
+								}
+							]
+						}
+					],
+					[
+						"dagsetning",
+						{
+							"__TYPE__": "FieldContent",
+							"type": "Timestamp",
+							"value": "2012-06-17T23:11:02Z"
 						}
 					]
 				]

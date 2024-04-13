@@ -1739,26 +1739,26 @@ export interface ListSliceRannsoknItem {
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   siggahl: prismic.ContentRelationshipField<"rannsoknir">;
-    /**
+
+  /**
    * titill field in *List → Items*
    *
    * - **Field Type**: Rich Text
-   * - **Placeholder**: listi
+   * - **Placeholder**: *None*
    * - **API ID Path**: list.items[].titill
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-	titill: prismic.RichTextField;
+  titill: prismic.RichTextField;
 
-	/**
-	 * dagsetning field in *List → Items*
-	 *
-	 * - **Field Type**: Timestamp
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: list.items[].dagsetning
-	 * - **Documentation**: https://prismic.io/docs/field#timestamp
-	 */
-	dagsetning: prismic.TimestampField;
-  
+  /**
+   * dagsetning field in *List → Items*
+   *
+   * - **Field Type**: Timestamp
+   * - **Placeholder**: *None*
+   * - **API ID Path**: list.items[].dagsetning
+   * - **Documentation**: https://prismic.io/docs/field#timestamp
+   */
+  dagsetning: prismic.TimestampField;
 }
 
 /**
@@ -1787,25 +1787,26 @@ export interface ListSliceSiggaItem {
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   siggahl: prismic.ContentRelationshipField<"sigga">;
-    /**
+
+  /**
    * titill field in *List → Items*
    *
    * - **Field Type**: Rich Text
-   * - **Placeholder**: listi
+   * - **Placeholder**: *None*
    * - **API ID Path**: list.items[].titill
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-	titill: prismic.RichTextField;
+  titill: prismic.RichTextField;
 
-	/**
-	 * dagsetning field in *List → Items*
-	 *
-	 * - **Field Type**: Timestamp
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: list.items[].dagsetning
-	 * - **Documentation**: https://prismic.io/docs/field#timestamp
-	 */
-	dagsetning: prismic.TimestampField;
+  /**
+   * dagsetning field in *List → Items*
+   *
+   * - **Field Type**: Timestamp
+   * - **Placeholder**: *None*
+   * - **API ID Path**: list.items[].dagsetning
+   * - **Documentation**: https://prismic.io/docs/field#timestamp
+   */
+  dagsetning: prismic.TimestampField;
 }
 
 /**
@@ -1834,25 +1835,26 @@ export interface ListSliceSkipulagItem {
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   siggahl: prismic.ContentRelationshipField<"skipulagsradgjof">;
-    /**
+
+  /**
    * titill field in *List → Items*
    *
    * - **Field Type**: Rich Text
-   * - **Placeholder**: listi
+   * - **Placeholder**: *None*
    * - **API ID Path**: list.items[].titill
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-	titill: prismic.RichTextField;
+  titill: prismic.RichTextField;
 
-	/**
-	 * dagsetning field in *List → Items*
-	 *
-	 * - **Field Type**: Timestamp
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: list.items[].dagsetning
-	 * - **Documentation**: https://prismic.io/docs/field#timestamp
-	 */
-	dagsetning: prismic.TimestampField;
+  /**
+   * dagsetning field in *List → Items*
+   *
+   * - **Field Type**: Timestamp
+   * - **Placeholder**: *None*
+   * - **API ID Path**: list.items[].dagsetning
+   * - **Documentation**: https://prismic.io/docs/field#timestamp
+   */
+  dagsetning: prismic.TimestampField;
 }
 
 /**

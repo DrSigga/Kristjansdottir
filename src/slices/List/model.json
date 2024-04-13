@@ -59,6 +59,22 @@
               "rannsoknir"
             ]
           }
+        },
+        "titill": {
+          "type": "StructuredText",
+          "config": {
+            "label": "titill",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "dagsetning": {
+          "type": "Timestamp",
+          "config": {
+            "label": "dagsetning",
+            "placeholder": ""
+          }
         }
       }
     },
@@ -80,6 +96,22 @@
               "sigga"
             ]
           }
+        },
+        "titill": {
+          "type": "StructuredText",
+          "config": {
+            "label": "titill",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "dagsetning": {
+          "type": "Timestamp",
+          "config": {
+            "label": "dagsetning",
+            "placeholder": ""
+          }
         }
       }
     },
@@ -100,6 +132,22 @@
             "customtypes": [
               "skipulagsradgjof"
             ]
+          }
+        },
+        "titill": {
+          "type": "StructuredText",
+          "config": {
+            "label": "titill",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "dagsetning": {
+          "type": "Timestamp",
+          "config": {
+            "label": "dagsetning",
+            "placeholder": ""
           }
         }
       }
