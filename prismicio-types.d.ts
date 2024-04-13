@@ -4,6 +4,51 @@ import type * as prismic from "@prismicio/client";
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
+/**
+ * Item in *Home → SiggaNav*
+ */
+export interface HomeDocumentDataSigganavItem {
+  /**
+   * sigga_hlekkir field in *Home → SiggaNav*
+   *
+   * - **Field Type**: Content Relationship
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.sigganav[].sigga_hlekkir
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  sigga_hlekkir: prismic.ContentRelationshipField<"sigga">;
+}
+
+/**
+ * Item in *Home → Skipulags_nav*
+ */
+export interface HomeDocumentDataSkipulagsNavItem {
+  /**
+   * skipulag_hlekkir field in *Home → Skipulags_nav*
+   *
+   * - **Field Type**: Content Relationship
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.skipulags_nav[].skipulag_hlekkir
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  skipulag_hlekkir: prismic.ContentRelationshipField<"skipulagsradgjof">;
+}
+
+/**
+ * Item in *Home → Rannsoknir*
+ */
+export interface HomeDocumentDataRannsoknirItem {
+  /**
+   * rannsoknir_hlekkir field in *Home → Rannsoknir*
+   *
+   * - **Field Type**: Content Relationship
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.rannsoknir[].rannsoknir_hlekkir
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  rannsoknir_hlekkir: prismic.ContentRelationshipField<"rannsoknir">;
+}
+
 type HomeDocumentDataSlicesSlice = ListSlice;
 
 /**
@@ -11,15 +56,48 @@ type HomeDocumentDataSlicesSlice = ListSlice;
  */
 interface HomeDocumentData {
   /**
-   * what field in *Home*
+   * SiggaNav field in *Home*
    *
-   * - **Field Type**: Content Relationship
+   * - **Field Type**: Group
    * - **Placeholder**: *None*
-   * - **API ID Path**: home.what
+   * - **API ID Path**: home.sigganav[]
    * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   * - **Documentation**: https://prismic.io/docs/field#group
    */
-  what: prismic.ContentRelationshipField;
+  sigganav: prismic.GroupField<Simplify<HomeDocumentDataSigganavItem>>;
+
+  /**
+   * Skipulags_nav field in *Home*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.skipulags_nav[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  skipulags_nav: prismic.GroupField<Simplify<HomeDocumentDataSkipulagsNavItem>>;
+
+  /**
+   * Rannsoknir field in *Home*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.rannsoknir[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  rannsoknir: prismic.GroupField<Simplify<HomeDocumentDataRannsoknirItem>>;
+
+  /**
+   * Teksti field in *Home*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: Sigríður Kristjánsdóttir
+   * - **API ID Path**: home.teksti
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  teksti: prismic.RichTextField;
 
   /**
    * Slice Zone field in *Home*
@@ -132,6 +210,17 @@ type RannsoknirDocumentDataSlicesSlice = FrameSlice;
  */
 interface RannsoknirDocumentData {
   /**
+   * Teksti field in *Rannsóknir*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: rannsoknir.teksti
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  teksti: prismic.RichTextField;
+
+  /**
    * Slice Zone field in *Rannsóknir*
    *
    * - **Field Type**: Slice Zone
@@ -197,6 +286,17 @@ type SiggaDocumentDataSlicesSlice = TextSSlice;
  */
 interface SiggaDocumentData {
   /**
+   * teksti field in *Sigga*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: sigga.teksti
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  teksti: prismic.RichTextField;
+
+  /**
    * Slice Zone field in *Sigga*
    *
    * - **Field Type**: Slice Zone
@@ -257,6 +357,17 @@ type SkipulagsradgjofDocumentDataSlicesSlice = AlternateGridSlice;
  * Content for Skipulagráðgjöf documents
  */
 interface SkipulagsradgjofDocumentData {
+  /**
+   * Teksti field in *Skipulagráðgjöf*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: skipulagsradgjof.teksti
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  teksti: prismic.RichTextField;
+
   /**
    * Slice Zone field in *Skipulagráðgjöf*
    *
@@ -646,6 +757,9 @@ declare module "@prismicio/client" {
     export type {
       HomeDocument,
       HomeDocumentData,
+      HomeDocumentDataSigganavItem,
+      HomeDocumentDataSkipulagsNavItem,
+      HomeDocumentDataRannsoknirItem,
       HomeDocumentDataSlicesSlice,
       MainnavDocument,
       MainnavDocumentData,
